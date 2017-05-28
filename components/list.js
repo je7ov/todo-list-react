@@ -13,7 +13,7 @@ class List extends Component {
         style={styles.list}
         data={this.props.data}
         ItemSeparatorComponent={Separator}
-        renderItem={({ item }) => <ListItem item={item} />}
+        renderItem={({ item }) => <ListItem item={item} onPress={this.props.onItemPress}/>}
         keyExtractor={item => item.key}
       />
     );

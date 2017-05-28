@@ -3,19 +3,17 @@ import { Text, Image, StyleSheet } from 'react-native';
 import CheckBox from 'react-native-check-box';
 
 class ListItem extends Component {
-  state = { checked: false };
-
   render() {
-    textStyle = this.state.checked ? styles.checkedText : styles.text;
+    textStyle = this.props.item.checked ? styles.checkedText : styles.text;
 
     return (
       <CheckBox
         style={styles.checkBox}
-        isChecked={this.state.checked}
+        isChecked={this.props.item.checked}
         checkedImage={<Image source={require('../assets/images/ic_custom_check_box.png')} style={styles.checkBoxImage} />}
         rightText={this.props.item.item}
         rightTextStyle={textStyle}
-        onClick={() => this.setState({ checked: !this.state.checked })}
+        onClick={() => this.props.onPress(this.props.item)}
       />
     );
   }

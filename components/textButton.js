@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 14,
     color: '#ccc',
+    padding: 8,
   }
 });
 

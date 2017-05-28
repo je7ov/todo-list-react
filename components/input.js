@@ -17,12 +17,13 @@ class Input extends Component {
           autoCapitalize='sentences'
           maxLength={140}
           onSubmitEditing={onPress}
+          blurOnSubmit={false}
           placeholder={placeholder}
           value={value}
           onChangeText={onChangeText}
         />
         <TouchableOpacity
-          style={styles.button}
+          style={styles.addButton}
           onPress={onPress}
         >
           <Image style={styles.addImage} source={require('../assets/images/add.png')} />
@@ -41,10 +42,13 @@ const styles = StyleSheet.create({
     lineHeight: 23,
   },
 
-  button: {
-    width: 24,
-    height: 24,
-    marginLeft: 12,
+  addButton: {
+    width: 32,
+    height: 32,
+    marginLeft: 4,
+    padding: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   addImage: {
