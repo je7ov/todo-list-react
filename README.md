@@ -1,2 +1,2 @@
 # todo-list-react
-Practice react app. To do list.
+To Do List practice react app

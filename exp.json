@@ -1,0 +1,24 @@
+{
+  "name": "Do Stuff",
+  "description": "Get it done with a todo list",
+  "slug": "do-stuff",
+  "privacy": "unlisted",
+  "sdkVersion": "17.0.0",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "primaryColor": "#3333ff",
+  "icon": "./assets/icons/app.png",
+  "loading": {
+    "icon": "./assets/icons/app.png",
+    "hideExponentText": false
+  },
+  "packagerOpts": {
+    "assetExts": ["ttf", "mp4"]
+  },
+  "ios": {
+    "supportsTablet": true
+  },
+  "android": {
+    "package": "com.je7ov.dostuff"
+  }
+}
