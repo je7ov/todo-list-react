@@ -100,19 +100,21 @@ class App extends Component {
   // empty list placeholder text
   renderList() {
     clearText = this.state.hasChecked ? 'CLEAR CHECKED' : 'CLEAR ALL';
+
     return (
       this.state.data === null || this.state.data.length === 0 ?
         <View style={styles.placeholderContainer}>
           <Text style={styles.placeholderText}>Everything is done!</Text>
         </View> :
         <View style={{ flex: 1 }}>
-          <List data={this.state.data} onItemPress={this.onItemPress.bind(this)} />
-          <View style={{ width: '100%', alignItems: 'center' }}>
-            <TextButton
-              text={clearText}
-              onPress={this.onClearPress.bind(this)}
-            />
-          </View>
+          <List
+            data={this.state.data}
+            onItemPress={this.onItemPress.bind(this)}
+          />
+          <TextButton
+            text={clearText}
+            onPress={this.onClearPress.bind(this)}
+          />
         </View>
     );
   }

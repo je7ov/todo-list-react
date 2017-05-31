@@ -28,12 +28,12 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#000',
   },
 
   checkedText: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#ccc',
   },
 

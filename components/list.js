@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FlatList, View, Text, StyleSheet } from 'react-native';
-import { ListItem, Separator } from './';
+import { ListItem, Separator, TextButton } from './';
 
 class List extends Component {
   shouldComponentUpdate(nextProps, nextState) {
@@ -9,21 +9,24 @@ class List extends Component {
 
   render() {
     return (
-      <FlatList
-        style={styles.list}
-        data={this.props.data}
-        ItemSeparatorComponent={Separator}
-        renderItem={({ item }) => <ListItem item={item} onPress={this.props.onItemPress}/>}
-        keyExtractor={item => item.key}
-      />
+      <View style={{ flex: 1 }}>
+        <FlatList
+          style={styles.list}
+          data={this.props.data}
+          ItemSeparatorComponent={Separator}
+          renderItem={({ item }) => <ListItem item={item} onPress={this.props.onItemPress}/>}
+          keyExtractor={item => item.key}
+        />
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   list: {
-    flex: 1,
     width: '100%',
+    paddingTop: 12,
+    paddingBottom: 12,
   }
 });
 

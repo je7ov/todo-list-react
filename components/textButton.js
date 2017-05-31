@@ -12,8 +12,9 @@ const TextButton = ({ text, onPress }) => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 14,
-    color: '#ccc',
+    color: '#aaa',
     padding: 8,
+    alignSelf: 'center',
   }
 });
 
